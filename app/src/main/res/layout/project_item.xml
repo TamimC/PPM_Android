@@ -48,8 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:background="@android:color/holo_blue_dark"
             android:text="BOARD"
-            android:padding="2dp" />
+            android:layout_margin="2dp" />
         <Button
             android:id="@+id/updateProjectButton"
             android:layout_width="wrap_content"
@@ -57,6 +58,8 @@
             android:layout_below="@+id/projectBoardButton"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:background="@android:color/holo_orange_dark"
+            android:layout_margin="2dp"
             android:text="UPDATE"/>
         <Button
             android:id="@+id/deleteProjectButton"
@@ -65,6 +68,9 @@
             android:layout_below="@+id/updateProjectButton"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:background="@android:color/holo_red_dark"
+            android:layout_margin="2dp"
+            android:onClick="onClickDeleteProject"
             android:text="DELETE"/>
     </RelativeLayout>
 

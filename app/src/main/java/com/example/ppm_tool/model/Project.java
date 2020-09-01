@@ -6,10 +6,10 @@ public class Project {
     private String projectName;
     private String projectIdentifier;
     private String description;
-    private Date startDate;
-    private Date endDate;
+    private String startDate;
+    private String endDate;
 
-    public Project(String projectName, String projectIdentifier, String description, Date startDate, Date endDate) {
+    public Project(String projectName, String projectIdentifier, String description, String startDate, String endDate) {
         this.projectName = projectName;
         this.projectIdentifier = projectIdentifier;
         this.description = description;
@@ -47,19 +47,19 @@ public class Project {
         this.description = description;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 

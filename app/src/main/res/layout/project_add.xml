@@ -1,28 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/NewProjectTitleLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Create a New Project"
-        android:textSize="28sp"
-        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
         android:padding="20dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"/>
+        android:text="Create a New Project"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/projectNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NewProjectTitleLabel"
+        android:hint="Project Name"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/projectIdentifierInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/projectNameInput"
+        android:hint="Unique Project Identifier"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/projectDescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/projectIdentifierInput"
+        android:inputType="text|textMultiLine"
+        android:gravity="top"
+        android:hint="Project Description"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textAlignment="center" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="Start Date of Project:"
+        android:layout_below="@+id/projectDescriptionInput"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <DatePicker
+        android:id="@+id/startDateInput"
+        android:layout_width="382dp"
+        android:layout_height="144dp"
+        android:layout_below="@+id/projectDescriptionInput"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date of Project:"
+        android:layout_below="@+id/startDateInput"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <DatePicker
+        android:id="@+id/endDateInput"
+        android:layout_width="376dp"
+        android:layout_height="152dp"
+        android:layout_below="@+id/startDateInput"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/endDateInput"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="onClickSubmitNewProject"
+        android:text="SUBMIT"
+        android:textColor="@android:color/white" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="17dp"
+        android:onClick="onClickBackButton"
+        android:background="@android:color/black"
+        app:srcCompat="@drawable/abc_vector_test" />
 </RelativeLayout>
