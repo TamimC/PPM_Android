@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="4dp"
     app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/uniqueIdentifierTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNIQUE"
+            android:textStyle="italic" />
+        <TextView
+            android:id="@+id/projectTitleTextView"
+            android:text="Project Title"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/uniqueIdentifierTextView"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@id/uniqueIdentifierTextView" />
+        <TextView
+            android:id="@+id/projectDescriptionTextView"
+            android:text="DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION  DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION  DESCRIPTION DESCRIPTION DESCRIPTION DESCRIPTION "
+            android:layout_toRightOf="@id/uniqueIdentifierTextView"
+            android:layout_below="@+id/projectTitleTextView"
+            android:layout_toLeftOf="@id/projectBoardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textStyle="italic"
+            android:textColor="@android:color/black"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@id/uniqueIdentifierTextView"
+            android:layout_toStartOf="@id/projectBoardButton" />
+
+        <Button
+            android:id="@+id/projectBoardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="BOARD"
+            android:padding="2dp" />
+        <Button
+            android:id="@+id/updateProjectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/projectBoardButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="UPDATE"/>
+        <Button
+            android:id="@+id/deleteProjectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateProjectButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:text="DELETE"/>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
